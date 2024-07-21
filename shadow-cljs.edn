@@ -1,0 +1,15 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies [[reagent "1.1.0"]
+                [thheller/shadow-cljs "2.15.10"]]
+
+ :dev-http {8080 "public"}
+
+ :builds
+ {:frontend
+  {:target :browser
+   :modules {:main {:init-fn tictactoe.frontend.app/init}}}}}
